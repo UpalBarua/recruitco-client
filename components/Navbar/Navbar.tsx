@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Menu, Transition } from '@headlessui/react';
 import { FaSlackHash } from 'react-icons/fa';
 import { RiMenu4Fill } from 'react-icons/ri';
 
@@ -9,27 +10,27 @@ const navLinks = [
     link: '/jobs',
   },
   {
-    id: 0,
+    id: 1,
     title: 'Resume Builder',
     link: '/jobs',
   },
   {
-    id: 0,
+    id: 2,
     title: 'Testimonials',
     link: '/jobs',
   },
   {
-    id: 0,
+    id: 3,
     title: 'About Us',
     link: '/jobs',
   },
   {
-    id: 0,
+    id: 4,
     title: 'Login',
     link: '/login',
   },
   {
-    id: 0,
+    id: 5,
     title: 'Register',
     link: '/register',
   },
@@ -46,7 +47,7 @@ export const Navbar = () => {
           <span>Recruitco</span>
         </Link>
         <ul className="hidden gap-3 md:flex md:gap-4 lg:gap-5">
-          {navLinks.map(({ id, title, link }) => (
+          {navLinks.slice(0, 4).map(({ id, title, link }) => (
             <li key={id}>
               <Link href={link}>{title}</Link>
             </li>
@@ -64,9 +65,20 @@ export const Navbar = () => {
             Register
           </Link>
         </div>
-        <button className="p-1 text-2xl rounded-sm hover:bg-dark-500 md:hidden">
-          <RiMenu4Fill />
-        </button>
+
+        <Menu>
+          <Menu.Button className="p-1 text-2xl rounded-sm hover:bg-dark-500 md:hidden">
+            <RiMenu4Fill />
+          </Menu.Button>
+
+          <Menu.Items className="flex fixed right-4 top-14 flex-col gap-5 p-8 rounded bg-dark-300">
+            {navLinks.map(({ id, title, link }) => (
+              <Menu.Item key={id}>
+                <Link href={link}>{title}</Link>
+              </Menu.Item>
+            ))}
+          </Menu.Items>
+        </Menu>
       </div>
     </nav>
   );
