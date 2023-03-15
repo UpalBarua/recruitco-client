@@ -1,18 +1,18 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const ResumeSection = () => {
+export const AppsSection = () => {
   return (
     <section className="grid gap-5 justify-center items-center py-16 text-center lg:justify-items-center lg:text-start lg:grid-cols-2">
       <div className="grid place-content-center bg-dark-400 rounded-tl-[88%]  rounded-tr-[36%]  rounded-bl-[67%] rounded-br-[78%]">
         <Image
-          src="/images/resume-builder.svg"
+          src="/images/apps.svg"
           alt="resume builder"
           height={500}
           width={500}
         />
       </div>
-      <div className="grid gap-5 justify-items-center max-w-sm lg:justify-items-start">
+      <div className="grid gap-5 justify-items-center max-w-sm lg:justify-items-start lg:-order-1">
         <h2 className="text-3xl font-bold font-secondary lg:text-4xl">
           Build professional resume with our free tool
         </h2>

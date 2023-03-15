@@ -2,6 +2,7 @@ import { Navbar } from '@/components/Navbar/Navbar';
 import { Hero } from '@/components/Hero/Hero';
 import { SearchBar } from '@/components/SearchBar/SearchBar';
 import { ResumeSection } from '@/components/ResumeSection';
+import { AppsSection } from '@/components/AppsSection/AppsSection';
 
 export default function index() {
   return (
@@ -12,6 +13,7 @@ export default function index() {
         <div>
           {/* <SearchBar /> */}
           <ResumeSection />
+          <AppsSection />
         </div>
       </main>
     </>
