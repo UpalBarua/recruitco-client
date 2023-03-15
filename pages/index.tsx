@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/Navbar/Navbar';
 import { Hero } from '@/components/Hero/Hero';
 import { SearchBar } from '@/components/SearchBar/SearchBar';
+import { ResumeSection } from '@/components/ResumeSection';
 
 export default function index() {
   return (
@@ -9,7 +10,8 @@ export default function index() {
       <main className="container">
         <Hero />
         <div>
-          <SearchBar />
+          {/* <SearchBar /> */}
+          <ResumeSection />
         </div>
       </main>
     </>
